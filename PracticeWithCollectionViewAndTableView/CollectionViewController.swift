@@ -20,9 +20,10 @@ class CollectionViewController: UICollectionViewController {
     
     final let colllectionItemWidth = 120
     
-    final let collectionItemHeight = 200
+    final let collectionItemHeight = 170
     
-    final let collectionItemPadding: CGFloat = 5
+    final let collectionItemPaddingHorizontal: CGFloat = 5
+    final let collectionItemPaddingVertical: CGFloat = 20
     
     final let cornerRadius: CGFloat = 8
     
@@ -34,9 +35,9 @@ class CollectionViewController: UICollectionViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical //.horizontal
         layout.itemSize = cellSize
-        layout.sectionInset = UIEdgeInsets(top: collectionItemPadding, left: collectionItemPadding, bottom: collectionItemPadding, right: collectionItemPadding)
-        layout.minimumLineSpacing = collectionItemPadding
-        layout.minimumInteritemSpacing = collectionItemPadding
+        layout.sectionInset = UIEdgeInsets(top: collectionItemPaddingVertical, left: collectionItemPaddingHorizontal, bottom: collectionItemPaddingVertical, right: collectionItemPaddingHorizontal)
+        layout.minimumLineSpacing = collectionItemPaddingVertical
+        layout.minimumInteritemSpacing = collectionItemPaddingHorizontal
         collectionView?.setCollectionViewLayout(layout, animated: true)
         collectionView?.reloadData()
     }
