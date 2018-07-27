@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  CustomCollectionViewCell.swift
 //  PracticeWithCollectionViewAndTableView
 //
 //  Created by Denis Markov on 7/27/18.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
-    @IBOutlet weak var newsImage: UIImageView!
+class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newsTitle: UILabel!
+    @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsDescription: UILabel!
     
     func initCell(image: String?, title: String?, description: String?) {
@@ -21,5 +20,4 @@ class TableViewCell: UITableViewCell {
         newsTitle.text = title
         newsDescription.text = description ?? "Default description"
     }
-
 }

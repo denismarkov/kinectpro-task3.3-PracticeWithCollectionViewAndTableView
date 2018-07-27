@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct NewsModel {
+    let number: String?
+    let description: String?
+    let imageName: String?
+}
